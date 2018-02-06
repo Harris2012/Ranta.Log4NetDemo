@@ -12,14 +12,9 @@ namespace TestLog4Net
         {
             ILog logger = LogManager.GetLogger(typeof(Program).FullName);
 
-            try
-            {
-                throw new Exception("This is a test.");
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex);
-            }
+            logger.Error("this is error.");
+
+            logger.Info("this is info.");
 
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
